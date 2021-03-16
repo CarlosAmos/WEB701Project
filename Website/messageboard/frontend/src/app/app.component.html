@@ -1,3 +1,11 @@
-<div>
-  <mat-slider min="1" max="100" step="1" value="1">Hello</mat-slider>
-</div>
+  <mat-card>
+  <form>
+    <mat-form-field>
+      <textarea name="message" [(ngModel)]="message" matInput placeholder="Message Body"></textarea>
+    </mat-form-field>
+  </form>
+  <mat-card-actions>
+    <button (click)="post()" mat-button>Post</button>
+  </mat-card-actions>
+</mat-card>
+
