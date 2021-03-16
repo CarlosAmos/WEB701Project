@@ -1,0 +1,2 @@
+This week we worked on the MEAN tutorial.
+We had to first create a angular website and set up a Mungo DB.
