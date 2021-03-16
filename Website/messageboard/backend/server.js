@@ -1,7 +1,13 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
-const port = 3000;
+const port =  3000;
 
-app.get('/', (req,res) = res.send ('hello'));
+app.use(bodyParser.text());
+
+app.post('/api/message', (req,res) => {
+    console.log(req.body);
+    res.status(200);
+})
 
 app.listen(port, () => console.log('App running on port', port));
