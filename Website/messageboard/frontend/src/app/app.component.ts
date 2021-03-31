@@ -9,7 +9,9 @@ import { HttpClient } from '@angular//common/http';
 export class AppComponent {
   message = '';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    this.http.get('http://localhost:3000/api/message').toPromise();
+  }
 
   post() {
     console.log('post' , this.message);
